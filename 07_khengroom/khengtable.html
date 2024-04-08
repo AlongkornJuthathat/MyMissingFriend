@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="khengtable.css" />
+    <script src="khengtable.js"></script>
+    <title>My Missing Friend</title>
+</head>
+<body onclick="change()">
+    <main>
+      <div class="container">
+        <div class="container-space">
+          <div class="content">
+            <div class="popup" onclick="myFunction()">
+                <span class="popuptext" id="myPopup"></span>
+                <span class="circle"></span>
+            </div>
+            <div class="popup2" onclick="myFunction2()">
+                <span class="popuptext2" id="myPopup2"></span>
+                <span class="circle2"></span>
+            </div>
+            <p id="text-box">บนโต๊ะเก่งมีแต่ใบเสร็จ</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+        var txtList = [
+          'ย่านลาดพร้าว?', 'ร้านสะดวกซื้อและงานพิเศษ?'
+            , 'ไปตามหาเบาะแสของเก่งที่ซอยลาดพร้าว', ''
+        ], idx = 0,
+            p = document.getElementById('text-box');
+
+        document.getElementByTagName('BODY')[0].addEventListener('click', fadein);
+    </script>
+  </body>
+</html>

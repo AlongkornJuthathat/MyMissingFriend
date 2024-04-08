@@ -1,0 +1,427 @@
+html{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    overflow: hidden;
+}
+body{
+    background-image: url("images/Home_Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+}
+main{
+    height: auto;
+}
+.crop{
+    font-family: 'Noto Sans Thai', sans-serif;
+    font-size: 1.1rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    width: 520px;
+    margin-top: 2rem;
+}
+.container{
+    width: auto;
+    margin: 0 10rem;
+}
+.content{
+    margin: 55px 0;
+    color: white;
+}
+.find-button{
+    font-family: 'Noto Sans Thai', sans-serif;
+    color: black;
+    width: 7rem;
+    background-color: hsl(0,1%,80%);
+    padding: 0.5rem 1.25rem;
+    text-align: center;
+    font-size: 1.25rem;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    cursor: pointer;
+    transition: 0.3s
+}
+.find-button:hover{
+    background-color: white;
+}
+.to-continue{
+    font-style: normal;
+    font-family: 'Noto Sans Thai', sans-serif;
+    display: none;
+}
+.logo{
+    margin-top: 7%;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+@media (width<=1500px){
+    .logo{
+        width: 500px;
+        height: 350px;
+    }
+    .container{
+        margin: 0 5rem;
+        margin-right: 15%;
+    }
+    .crop{
+        margin-top: 1rem;
+    }
+    .popup .popuptext{
+        transform: translate(0%, 5%);
+    }
+}
+@media (width<=1000px){
+    .logo{
+        width: 400px;
+        height: 250px;
+    }
+    .container{
+        margin: 0 4rem;
+        margin-right: 25%;
+    }
+    .crop{
+        margin-top: 0.5rem;
+    }
+    .popup .popuptext{
+        transform: translate(0%, 10%);
+    }
+}
+@media (width<=700px){
+    body{
+        background-position: right;
+    }
+    .logo{
+        width: 350px;
+        height: 200px;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 0;
+    }
+    .container{
+        margin: 0;
+    }
+    .crop{
+        display: none;
+    }
+    .find-button{
+        display: none;
+    }
+    .to-continue{
+        display: flex;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #menu {
+        transform: none;
+        opacity: 0;
+    
+        transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+    .popup{
+        display: none;
+    }
+    #music{
+        margin-left: 10%;
+    }
+}
+@media (width<=400px){
+    body{
+        background-position: right;
+    }
+    .logo{
+        width: 275px;
+        height: 150px;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 0;
+    }
+    .container{
+        margin: 0;
+    }
+    .crop{
+        display: none;
+    }
+    .find-button{
+        display: none;
+    }
+    .to-continue{
+        font-size: 11px;
+        display: flex;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+@media (height<=800px){
+    .logo{
+        width: 400px;
+        height: 250px;
+    }
+    .find-button{
+        width: 5.5rem;
+        font-size: 1rem;
+    }
+}
+@media (height<=750px){
+    .logo{
+        width: 300px;
+        height: 200px;
+    }
+    .find-button{
+        width: 5rem;
+        font-size: 0.8rem;
+        margin-bottom: 3rem 0;
+    }
+    .crop{
+        font-size: 0.8rem;
+        width: 300px;
+    }
+    .content{
+        margin: 10px 0;
+        padding-top: -50% 0;
+    }
+    #menuToggle{
+        transform: translate(-3rem, -2.8rem);
+    }
+}
+@media (height<=600px){
+    .logo{
+        width: 250px;
+        height: 150px;
+        margin-top: 5%;
+    }
+    .find-button{
+        width: 4rem;
+        font-size: 0.8rem;
+    }
+    .popup .popuptext{
+        transform: translate(0, -2rem);
+    }
+}
+@media (height<=500px){
+    .logo{
+        margin-top: 0;
+    }
+    .crop{
+        margin-top: 3px;
+    }
+    .find-button{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .popup .popuptext{
+        transform: translate(0, -3rem);
+    }
+}
+@media (height<=400px){
+    .logo{
+        width: 200px;
+        height: 100px;
+    }
+    .find-button{
+        width: 3rem;
+        font-size: 0.5rem;
+    }
+    .popup .popuptext{
+        transform: translate(0, -7rem);
+    }
+}
+a{
+    text-decoration: none;
+    color:  rgb(158, 158, 158);
+    font-family: 'Noto Sans Thai', sans-serif;
+    transition: color 0.3s ease;
+}
+a:hover{
+    color: black;
+}
+#menuToggle{
+    display: block;
+    position: absolute;
+    top: 70px;
+    right: 8%;
+    
+    z-index: 1;
+    
+    -webkit-user-select: none;
+    user-select: none;
+}
+#menuToggle input{
+    display: block;
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+    
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    
+    -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span{
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    
+    background: #cdcdcd;
+    border-radius: 3px;
+    
+    z-index: 1;
+    
+    transform-origin: 4px 0px;
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+}
+
+#menuToggle span:first-child{
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2){
+    transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span{
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: white;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3){
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2){
+    opacity: 1;
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu{
+    position: absolute;
+    width: 150px;
+    margin: 1rem 0;
+    padding: 30px;
+    padding-top: 0;
+    right: 10px;
+    border-radius: 12px;
+    
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    
+    transform-origin: 0% 0%;
+    transform: translate(200%, 0);
+    
+    transition: transform 0s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li{
+    padding: 10px 0;
+    font-size: 15px;
+}
+
+/*
+ * And let's fade it in from the left
+ */
+#menuToggle input:checked ~ ul{
+    transform: none;
+    opacity: 1;
+}
+#headmenu{
+    padding: 1rem;
+    color: black;
+}
+
+.popup{
+    text-align: center;
+    cursor: pointer;
+    color: rgb(187, 187, 187);
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: 'Noto Sans Thai', sans-serif;
+    transition: 0.3s;
+    width: 8rem;
+    margin-left: 88%;
+}
+.popup:hover{
+    color: white;
+}
+  
+.popup .popuptext{
+    visibility: hidden;
+    width: 100%;
+    height: 0;
+    background-color: rgb(96, 102, 97);
+    color: #fff;
+    text-align: center;
+    margin-top: -20%;
+    padding-top: 36%;
+    padding-bottom: 150%;
+    position: absolute;
+    z-index: 3;
+    top: 0%;
+    left: 0%;
+    opacity: 0.9;
+}
+.popup .show{
+    visibility: visible;
+}
+
+#music input{
+    content: url("images/Music_On.png");
+    appearance: none;
+    cursor: pointer;
+    display: block;
+    width: 50px;
+    height: 40px;
+}
+#music input:checked{
+    content: url("images/Music_Off.png");
+}

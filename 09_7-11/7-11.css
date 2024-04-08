@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+html{
+    width: 200%;
+    height: 150%;
+    overflow-y: hidden;
+}
+body{
+    font-family: 'Kanit', sans-serif;
+    background-image: url("../images/7-11_scene.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 30% 0%;
+    overflow-y: hidden;
+}
+.popup{
+    position: absolute;
+    text-align: center;
+    cursor: pointer;
+    background-color: grey;
+    color: rgb(187, 187, 187);
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: 'Noto Sans Thai', sans-serif;
+    transition: 0.3s;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    top: 60%;
+    left: 45%;
+}
+
+.popup .popuptext{
+    width: 3000px;
+    height: 3000px;
+    visibility: hidden;
+    background-image: url("../images/newspaper_scene.png");
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: center;
+    background-color: rgb(0, 0, 0, 0.8);
+    position: fixed;
+    z-index: 3;
+    transform: translate(-47%, -53%);
+}
+.popup .show{
+    visibility: visible;
+}
+.circle{
+    z-index: -1;
+    position: absolute;
+    left: -45%;
+    top: -40%;
+    background-color: grey;
+    border-radius: 40px;
+    width: 3.75rem;
+    height: 3.75rem;
+    opacity: 0.75;
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+.popup2{
+    position: absolute;
+    text-align: center;
+    cursor: pointer;
+    background-color: grey;
+    color: rgb(187, 187, 187);
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: 'Noto Sans Thai', sans-serif;
+    transition: 0.3s;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    top: 30%;
+    left: 90%;
+}
+.circle2{
+    z-index: -1;
+    position: absolute;
+    left: -45%;
+    top: -40%;
+    background-color: grey;
+    border-radius: 40px;
+    width: 3.75rem;
+    height: 3.75rem;
+    opacity: 0.75;
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+@keyframes ping {
+    75%,
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+}
+@media (width<=1500px){
+    html{
+        width: 300%;
+        height: 150%;
+    }
+    .popup{
+        left: 70%;
+    }
+    .popup2{
+        left: 135%;
+    }
+    .popup .popuptext{
+        width: 2500px;
+        height: 2500px;
+        transform: translate(-57%, -53%);
+    }
+}
+@media (width<=1000px){
+    html{
+        width: 400%;
+        height: 150%;
+    }
+    .popup{
+        left: 90%;
+    }
+    .popup2{
+        left: 190%;
+    }
+    .popup .popuptext{
+        width: 2000px;
+        height: 2000px;
+        transform: translate(-67%, -53%);
+    }
+}
+@media (width<=700px){
+    .popup .popuptext{
+        width: 1700px;
+        height: 1700px;
+        transform: translate(-65%, -53%);
+    }
+}
+@media (width<=600px){
+    html{
+        width: 500%;
+        height: 150%;
+    }
+    .popup{
+        left: 90%;
+    }
+    .popup2{
+        left: 260%;
+    }
+    .popup .popuptext{
+        transform: translate(-62%, -53%);
+    }
+}
+@media (width<=400px){
+    html{
+        width: 500%;
+        height: 150%;
+    }
+    .popup{
+        left: 90%;
+    }
+    .popup2{
+        left: 260%;
+    }
+    .popup .popuptext{
+        transform: translate(-58%, -53%);
+    }
+}
+
+@media (height<=800px){
+    body{
+        background-position: 30% 20%;
+    }
+    .popup{
+        top: 70%;
+    }
+}
+@media (height<=500px){
+    body{
+        background-position: 30% 30%;
+    }
+    .popup{
+        top: 80%;
+    }
+}

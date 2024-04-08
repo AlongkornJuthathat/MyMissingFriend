@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Mitr&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+
+/*html{
+  width: 6000px;
+  height: 100%;
+  overflow-y: hidden;
+}
+body{
+  font-family: 'Kanit', sans-serif;
+  background-image: url("../images/Soi1bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 0%;
+  overflow-y: hidden;
+}
+
+main{
+  height: auto;
+}
+.outer-container{
+  width: auto;
+  margin: 0 10rem;
+}
+
+.content{
+  margin: 12% 0;
+  color: white;
+}*/
+
+body {
+  font-family: "Kanit", sans-serif;
+  text-shadow: 0px 2px 2px rgba(29, 29, 29, 0.55);
+  color: white;
+  /*background-image: url("../images/Soi1bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 342vw;
+  height: 100vh;
+  overflow-x: scroll;*/
+  margin: 0;
+  padding: 0;
+}
+
+.outer-container {
+  width: 100vh;
+  height: 100vw;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+}
+
+#scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/*#scrollbar::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #383838;
+} */
+
+.container-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 6000px;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+}
+
+.content {
+  width: 6000px;
+  height: 100vh;
+  background-image: url("../images/Soi1bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+div.GoRight{
+  bottom: 4.9vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  font-size: 20px;
+  animation: fadeInAnimation 1.25s alternate infinite;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*
+@media (width<=1500px) {
+  .popup {
+    transform: translate(-50px, 0%);
+  }
+  .popup2 {
+    transform: translate(50px, 0%);
+  }
+  .popup .popuptext {
+    background-size: 5%;
+  }
+}
+@media (width<=1000px) {
+  .popup {
+    transform: translate(-100px, 0%);
+  }
+  .popup2 {
+    transform: translate(100px, 0%);
+  }
+}
+@media (width<=700px) {
+  .popup {
+    transform: translate(-150px, 0%);
+  }
+}
+@media (width<=400px) {
+  .popup {
+    transform: translate(-150px, 0%);
+  }
+}*/
+
+p {
+  opacity: 1;
+  transition-property: all;
+  transition-duration: 1.5s;
+  transition-timing-function: ease;
+  transition-delay: none;
+}
+p.hide {
+  opacity: 0;
+}
+.popup {
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+  background-color: white;
+  color: rgb(187, 187, 187);
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: "Noto Sans Thai", sans-serif;
+  transition: 0.3s;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.pop1 {
+  top: 40%;
+  left: 15.5%;
+}
+
+.pop2 {
+  top: 70%;
+  left: 39%;
+}
+
+.pop3 {
+  background-color: rgb(246, 78, 78);
+  top: 62%;
+  left: 72.5%;
+}
+
+.pop4 {
+  top: 68%;
+  left: 77%;
+}
+
+.pop5 {
+  background-color: rgb(246, 78, 78);
+  top: 65%;
+  left: 87.7%;
+}
+
+.popuptext1 {
+  width: 300px;
+  height: 440px;
+  visibility: hidden;
+  background-image: url("../images/bill_travel.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 3;
+  transform: translate(40%, -50%);
+}
+.popuptext3 {
+  width: 300px;
+  height: 440px;
+  visibility: hidden;
+  background-image: url("../images/Notkheng1.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  z-index: 3;
+  transform: translate(-105%, -80%);
+}
+.popuptext5 {
+  width: 300px;
+  height: 440px;
+  visibility: hidden;
+  background-image: url("../images/Notkheng2.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  z-index: 3;
+  transform: translate(40%, -50%);
+}
+
+.pop1 .show {
+  visibility: visible;
+}
+.pop2 .show {
+  visibility: visible;
+}
+.pop3 .show {
+  visibility: visible;
+}
+.pop4 .show {
+  visibility: visible;
+}
+.pop5 .show {
+  visibility: visible;
+}
+
+.circle {
+  z-index: 1;
+  position: absolute;
+  left: -45%;
+  top: -40%;
+  background-color: white;
+  border-radius: 40px;
+  width: 3.75rem;
+  height: 3.75rem;
+  opacity: 0.75;
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.circle2 {
+  z-index: 1;
+  position: absolute;
+  left: -45%;
+  top: -40%;
+  background-color: rgb(233, 121, 121);
+  border-radius: 40px;
+  width: 3.75rem;
+  height: 3.75rem;
+  opacity: 0.75;
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+
+@keyframes ping {
+  75%,
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+

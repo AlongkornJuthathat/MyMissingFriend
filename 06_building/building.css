@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+
+body{
+    color: #f8f8f8;
+    font-family: 'Kanit', sans-serif;
+    text-shadow: 0px 2px 2px rgba(29, 29, 29, 0.55);
+    background-image: url("../images/scene_kengdorm.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    width: 100%;
+    height: 2900px;
+    transition: 1.5s;
+    overflow: scroll;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    height: auto;
+}
+
+content{
+    width: 100vw;
+    height: 2900px;
+}
+
+#text-box {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fadeloop 1.25s alternate infinite;
+    /*animation: fadeInAnimation ease 3s;
+    -webkit-transition: all .5s;
+    transition: all .5s;*/
+}
+
+.dot{
+    cursor: pointer;
+    position: absolute;
+    left: 53%;
+    bottom: -200%;
+    background: grey;
+    border-radius: 40px;
+    width: 2rem;
+    height: 2rem;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+}
+
+.circle{
+    position: absolute;
+    left: -45%;
+    top: -40%;
+    background-color: grey;
+    border-radius: 40px;
+    width: 3.75rem;
+    height: 3.75rem;
+    opacity: 0.75;
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.img_pole{
+    position: absolute;
+    top: 210%;
+    left: auto;
+    width: 100%;
+    height: 170%;
+}
+
+
+@keyframes ping {
+    75%,
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+@keyframes fadeloop {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+p { 
+    opacity: 1; 
+    transition-property: all;
+    transition-duration: 1.5s;
+    transition-timing-function: ease;
+    transition-delay: none; 
+}
+p.hide { 
+    opacity: 0;  
+}
+
+@media (width<=500px){
+    html{
+        height: 100vh;
+        width: auto;
+    }
+    body{
+        background-image: url("../images/mobile_building.png");
+        height: 100vh;
+        width: auto;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+    }
+    #text-box{
+        font-size: 16px;
+        top: 30%;
+    }
+    .dot{
+        position: absolute;
+        bottom: 5%;
+    }
+    .img_pole {
+        visibility: hidden;
+    }
+}
